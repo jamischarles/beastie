@@ -1,0 +1,177 @@
+// variables
+$dark-brown = #4b3418
+$input-bg-color = #faf9f5
+$input-border-color = #030000
+
+//simple resets
+*
+  box-sizing: border-box
+
+body
+  // background-color: red
+  padding: 50px
+  font: 14px Helvetica, Arial, sans-serif
+  // font-family: Helvetica, Arial, sans-serif
+a
+  color: #00B7FF
+
+
+.container
+  // margin: 0 auto
+  overflow: hidden
+
+  height: 600px
+  left: 500px
+  position: absolute
+  width: 400px
+
+.screen
+  border: 1px solid $dark-brown
+  height: 600px
+  margin-bottom: 15px
+  position: absolute
+  // right: -1200px
+  // -webkit-transform: translateX(1200px);
+  -webkit-transform: translateX(0px);
+  transition: -webkit-transform 0.5s ease-out;
+  width: 400px
+
+
+
+
+  &.hidden
+    -webkit-transform: translateX(1200px);
+    // transition: -webkit-transform 5s ease-out;
+
+  &.overlay
+    background-color: rgba(0, 0, 0, 0.81)
+    transition: all 0s;
+    // -webkit-filter: grayscale(0.5) blur(10px);
+
+  .header, .footer
+    background-color: $dark-brown
+    color: #fcffff
+    height: 65px
+    text-align: center
+    padding: 26px
+  .body
+    background-color: #f3eae3
+    height: (600 - 65 * 2)px //screen height - header - footer. Can we fetch this from those directly?
+
+    fieldset //FIXME: Let's make this a class instead of el
+      border: none
+      padding: 0
+    .field_container
+      background-color: $input-bg-color
+      border-radius: 12px
+      border: 1px solid $input-border-color
+      margin-bottom:15px
+      padding: 10px
+
+    .transaction_container
+      border-spacing: 0
+      width: 100%
+
+      .transaction
+        color #1e1917
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, .7);
+        &:nth-child(odd)
+          background-color: #e4d5c2
+        &:nth-child(even)
+          background-color: #e9d9ca
+
+        .date
+          padding: 15px 25px 15px 25px
+        .amt
+          padding: 15px 25px 15px 25px
+          text-align: right
+
+    .pri-cta
+      display: block
+      margin: 0 auto
+      width: 80%
+
+    //form validation
+    .send_to_container .validate_email
+      &.valid
+        background-color: green
+      &.invalid
+        background-color: red
+
+  //specific screens
+  &.home .body //home screen
+    // align-items: center
+    // align-content: space-around
+    flex-direction: column
+    display: flex
+    // height: 600px
+    justify-content: space-around
+
+  &.send_money .body
+    padding: 22px 19px
+
+    .send_to
+      border: none
+      background: transparent
+      font-size: 14px
+      line-height: 18px
+      height: 40px
+      margin: -10px 0
+      width: 90%
+    .send_amt
+      border: none
+      background: transparent
+      font-size: 14px
+      line-height: 18px
+      height: 40px
+      margin: -10px 0
+      width: 65%
+    .send_msg
+      background-color: transparent
+      border: none
+      resize: none
+      width: 100%
+
+    .send_purpose_container
+      padding-top: 10px
+    .send_purpose
+      display: none
+
+      &:checked + .send_purpose_btn //highlight color
+        color: #c27c31
+
+    .send_purpose_btn //emulate iOS radio button
+      background-color $input-bg-color
+      border: 1px solid $input-border-color
+      border-radius: 12px
+
+      display: block
+      padding: 10px
+
+      &:first-of-type //emulate iOS button corners
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+      &:last-of-type
+        border-top: 0
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+
+    // .pri-cta:nth-of-type(1)
+    //   align-self: flex-start
+    //   color: red
+    //
+    // .pri-cta:nth-of-type(2)
+    //   align-self: flex-end
+    //   color: blue
+
+/*
+  General buttons
+*/
+.pri-cta
+  background-color: #e0e0e0
+  border: none
+  color: #414141
+  font-family: Helvetica //Why is this necessary?
+  font-size: 16px
+  font-weight: bold
+  padding: 20px

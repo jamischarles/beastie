@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 50px;
+  font: 14px Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.container {
+  overflow: hidden;
+  height: 600px;
+  left: 500px;
+  position: absolute;
+  width: 400px;
+}
+.screen {
+  border: 1px solid #4b3418;
+  height: 600px;
+  margin-bottom: 15px;
+  position: absolute;
+  -webkit-transform: translateX(0px);
+  transition: -webkit-transform 0.5s ease-out;
+  width: 400px;
+}
+.screen.hidden {
+  -webkit-transform: translateX(1200px);
+}
+.screen.overlay {
+  background-color: rgba(0,0,0,0.81);
+  transition: all 0s;
+}
+.screen .header,
+.screen .footer {
+  background-color: #4b3418;
+  color: #fcffff;
+  height: 65px;
+  text-align: center;
+  padding: 26px;
+}
+.screen .body {
+  background-color: #f3eae3;
+  height: 470px;
+}
+.screen .body fieldset {
+  border: none;
+  padding: 0;
+}
+.screen .body .field_container {
+  background-color: #faf9f5;
+  border-radius: 12px;
+  border: 1px solid #030000;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.screen .body .transaction_container {
+  border-spacing: 0;
+  width: 100%;
+}
+.screen .body .transaction_container .transaction {
+  color: #1e1917;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+}
+.screen .body .transaction_container .transaction:nth-child(odd) {
+  background-color: #e4d5c2;
+}
+.screen .body .transaction_container .transaction:nth-child(even) {
+  background-color: #e9d9ca;
+}
+.screen .body .transaction_container .transaction .date {
+  padding: 15px 25px 15px 25px;
+}
+.screen .body .transaction_container .transaction .amt {
+  padding: 15px 25px 15px 25px;
+  text-align: right;
+}
+.screen .body .pri-cta {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+.screen .body .send_to_container .validate_email.valid {
+  background-color: #008000;
+}
+.screen .body .send_to_container .validate_email.invalid {
+  background-color: #f00;
+}
+.screen.home .body {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+.screen.send_money .body {
+  padding: 22px 19px;
+}
+.screen.send_money .body .send_to {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  height: 40px;
+  margin: -10px 0;
+  width: 90%;
+}
+.screen.send_money .body .send_amt {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  height: 40px;
+  margin: -10px 0;
+  width: 65%;
+}
+.screen.send_money .body .send_msg {
+  background-color: transparent;
+  border: none;
+  resize: none;
+  width: 100%;
+}
+.screen.send_money .body .send_purpose_container {
+  padding-top: 10px;
+}
+.screen.send_money .body .send_purpose {
+  display: none;
+}
+.screen.send_money .body .send_purpose:checked + .send_purpose_btn {
+  color: #c27c31;
+}
+.screen.send_money .body .send_purpose_btn {
+  background-color: #faf9f5;
+  border: 1px solid #030000;
+  border-radius: 12px;
+  display: block;
+  padding: 10px;
+}
+.screen.send_money .body .send_purpose_btn:first-of-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.screen.send_money .body .send_purpose_btn:last-of-type {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/*
+  General buttons
+*/
+.pri-cta {
+  background-color: #e0e0e0;
+  border: none;
+  color: #414141;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+}
