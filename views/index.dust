@@ -24,7 +24,7 @@
   <div class="screen send_money hidden" id="screen-send">
     <div class="header">Send Money</div>
     <div class="body">
-      <form id="send_form" method="post">
+      <form id="send_form" class="send_form" method="post">
 
 
         <fieldset class="field_container send_to_container">
