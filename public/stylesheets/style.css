@@ -18,7 +18,7 @@ a {
   overflow: hidden;
   height: 602px;
   position: relative;
-  width: 400px;
+  width: 100%;
 }
 .screen {
   height: 602px;
@@ -26,7 +26,7 @@ a {
   position: absolute;
   -webkit-transform: translateX(0px);
   transition: -webkit-transform 0.5s ease-out;
-  width: 400px;
+  width: 100%;
 }
 .screen.hidden {
   -webkit-transform: translateX(1200px);
@@ -209,8 +209,30 @@ a {
  * MEDIA QUERIES
  *
 **/
-@media (min-width: 600px) and (max-width: 1200px) {
-  body {
-    background-color: #f00;
+@media (min-width: 768px) and (max-width: 992px) {
+  .screen.home .body {
+    padding: 42px 50px;
+  }
+  .screen.send_money .body {
+    padding: 42px 50px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .pri-cta {
+    padding: 20px 10px;
+  }
+  .screen.home .body {
+    padding: 42px 50px;
+  }
+  .screen.send_money .body {
+    padding: 42px 50px;
+  }
+}
+@media (min-width: 1201px) {
+  .screen.home .body {
+    padding: 42px 50px;
+  }
+  .screen.send_money .body {
+    padding: 42px 50px;
   }
 }
