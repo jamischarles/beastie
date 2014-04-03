@@ -84,10 +84,10 @@ a {
   width: 80%;
 }
 .screen .body .send_to_container .validate_email.valid {
-  background-color: #008000;
+  background-color: #daffda;
 }
 .screen .body .send_to_container .validate_email.invalid {
-  background-color: #f00;
+  background-color: #faa0a0;
 }
 .screen.home .body {
   flex-direction: column;
