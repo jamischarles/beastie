@@ -5,7 +5,6 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var kleiDust = require('klei-dust');
@@ -33,15 +32,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 
+app.get('/history/:start_num', routes.getHistory); //route for JSON history data
 
-
-
-//Sets up Global Variables to be used in all views
-// dust.makeBase({
-//     copy: '&copy; 2011 Nobody LLC'
-// });
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

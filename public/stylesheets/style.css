@@ -8,6 +8,9 @@ body {
 a {
   color: #00b7ff;
 }
+.scroll {
+  overflow: scroll;
+}
 .container {
   overflow: hidden;
   height: 600px;
@@ -142,6 +145,10 @@ a {
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.screen.send_history .load_more_msg {
+  text-align: center;
+  padding: 10px;
 }
 /*
   General buttons
