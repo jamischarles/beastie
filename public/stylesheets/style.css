@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: #9e9e9e;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -20,7 +21,6 @@ a {
   width: 400px;
 }
 .screen {
-  border: 1px solid #4b3418;
   height: 602px;
   margin-bottom: 15px;
   position: absolute;
@@ -204,4 +204,13 @@ a {
 .footer .sec-cta:hover {
   background-color: #ebebeb;
   cursor: pointer;
+}
+/**
+ * MEDIA QUERIES
+ *
+**/
+@media (min-width: 600px) and (max-width: 1200px) {
+  body {
+    background-color: #f00;
+  }
 }

@@ -9,6 +9,7 @@ $input-border-color = #666
 
 body
   // padding: 50px
+  background-color #9E9E9E
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   margin 0
@@ -27,7 +28,7 @@ a
   width: 400px
 
 .screen
-  border: 1px solid $dark-brown
+  // border-bottom: 1px solid $dark-brown
   height: 602px
   margin-bottom: 15px
   position: absolute
@@ -208,3 +209,15 @@ a
     &:hover
       background-color: #ebebeb
       cursor: pointer
+
+
+/**
+ * MEDIA QUERIES
+ *
+**/
+// PHONE
+
+// TABLET
+@media (min-width: 600px) and (max-width: 1200px)
+  body
+    background-color  red
