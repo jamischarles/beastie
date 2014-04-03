@@ -150,6 +150,10 @@ a {
   text-align: center;
   padding: 10px;
 }
+.screen.send_confirmation .success {
+  padding-top: 180px;
+  text-align: center;
+}
 /*
   General buttons
 */

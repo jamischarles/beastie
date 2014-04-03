@@ -67,11 +67,11 @@
 
   <div class="overlay screen hidden" id="screen-overlay"></div>
 
-  <div class="screen hidden" id="screen-confirmation">
+  <div class="screen hidden send_confirmation" id="screen-confirmation">
     <div class="header">Send Money</div>
     <div class="body">
 
-      <div class="success">You have sent $1.00 USD to John Doe!</div>  
+      <div class="success">You have sent $1.00 USD to John Doe!</div>
     </div><!-- /.body -->
     <div class="footer">
       <button class="nav-btn" data-target="screen-send">Send Money</button>
