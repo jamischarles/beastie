@@ -9,7 +9,7 @@
     var email_inputs = document.querySelectorAll('.validate_email');
     var currency_inputs = document.querySelectorAll('.format_currency');
     var currency_selection = document.querySelector('.send_curr');
-    var clear_form_button = document.querySelector('.btn-clear-form');
+    var clear_form_buttons = document.querySelectorAll('.btn-clear-form');
 
 
     //attach keyup handlers for e-mail validation
@@ -24,7 +24,10 @@
 
     currency_selection.addEventListener('change', changeCurrency);
 
-    clear_form_button.addEventListener('click', clearForm);
+    for (var k = 0; k < clear_form_buttons.length; k++) {
+      clear_form_buttons[k].addEventListener('click', clearForm);
+    }
+
 
 
   }

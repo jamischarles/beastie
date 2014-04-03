@@ -41,7 +41,7 @@
         </fieldset>
 
         <fieldset class="field_container">
-            <label>Message (Optional): <textarea class="send_msg" id="" cols="30" rows="10"></textarea></label>
+            <label>Message (Optional): <textarea class="send_msg" id="" cols="30" rows="6"></textarea></label>
         </fieldset>
 
         <fieldset class="send_purpose_container">
@@ -55,8 +55,8 @@
       </form>
     </div><!-- /.body -->
     <div class="footer">
-      <button class="btn-clear-form">Clear</button>
-      <button class="nav-btn" data-target="screen-overlay,screen-confirmation">Next</button>
+      <button class="btn-clear-form sec-cta">Clear</button>
+      <button class="nav-btn pri-cta" data-target="screen-overlay,screen-confirmation">Next</button>
     </div><!-- /.footer -->
   </div> <!-- /#screen-send -->
 
@@ -69,8 +69,8 @@
       <div class="success">You have sent $1.00 USD to John Doe!</div>
     </div><!-- /.body -->
     <div class="footer">
-      <button class="nav-btn" data-target="screen-send">Send Money</button>
-      <button class="nav-btn" data-target="screen-history">Transaction History</button>
+      <button class="btn-clear-form nav-btn sec-cta" data-target="screen-send">Send Money</button>
+      <button class="nav-btn pri-cta" data-target="screen-history">Transaction History</button>
     </div><!-- /.footer -->
   </div> <!-- /#screen-confirmation -->
 
@@ -89,7 +89,7 @@
       <div class="load_more_msg" id="load_more"> Loading more... </div>
     </div><!-- /.body -->
     <div class="footer">
-      <button class="nav-btn" data-target="screen-home">Back</button>
+      <button class="nav-btn pri-cta" data-target="screen-home">Back</button>
     </div><!-- /.footer -->
   </div> <!-- /#screen-history -->
 
