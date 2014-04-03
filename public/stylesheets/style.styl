@@ -8,10 +8,8 @@ $input-border-color = #030000
   box-sizing: border-box
 
 body
-  // background-color: red
   padding: 50px
   font: 14px Helvetica, Arial, sans-serif
-  // font-family: Helvetica, Arial, sans-serif
 a
   color: #00B7FF
 
@@ -39,16 +37,12 @@ a
   width: 400px
 
 
-
-
   &.hidden
     -webkit-transform: translateX(1200px);
-    // transition: -webkit-transform 5s ease-out;
 
   &.overlay
     background-color: rgba(0, 0, 0, 0.81)
     transition: all 0s;
-    // -webkit-filter: grayscale(0.5) blur(10px);
 
   .header, .footer
     background-color: $dark-brown
@@ -102,11 +96,8 @@ a
 
   //specific screens
   &.home .body //home screen
-    // align-items: center
-    // align-content: space-around
     flex-direction: column
     display: flex
-    // height: 600px
     justify-content: space-around
 
   &.send_money .body
@@ -164,7 +155,7 @@ a
     padding: 10px
 
   &.send_confirmation .success
-    padding-top: 180px  
+    padding-top: 180px
     text-align: center
 
 

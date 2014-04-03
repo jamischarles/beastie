@@ -1,10 +1,116 @@
-{>"layouts/main"/}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercise</title>
 
-{<title}Foo {title}{/title}
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="screen home visible" id="screen-home">
+    <div class="header">What are we doing?</div>
+    <div class="body">
+      <button class="pri-cta nav-btn" data-target="screen-send">Send Money</button>
+      <button class="pri-cta nav-btn" data-target=screen-history>View transaction history</button>
+    </div><!-- /.body -->
+    <div class="footer"></div>
+  </div> <!-- /#screen-home -->
 
 
-{<html_body}
-<!--     <p>This is my index.dust main body {title}</p> -->
-{/html_body}
+  <div class="screen send_money hidden" id="screen-send">
+    <div class="header">Send Money</div>
+    <div class="body">
+      <form id="send_form" method="post">
 
-{<copy}{copy|s}{/copy}
+
+        <fieldset class="field_container send_to_container">
+          <label>To: <input class="send_to validate_email" id="send_to" type="text" /></label>
+        </fieldset>
+
+        <fieldset class="field_container">
+          <label>Amount: <input class="send_amt format_currency" id="send_amt" type="text" /></label>
+          <select name="" id="send_curr_selector" class="send_curr">
+            <option value="$">USD</option>
+            <option value="€">EUR</option>
+            <option value="¥">JPY</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="field_container">
+            <label>Message (Optional): <textarea class="send_msg" id="" cols="30" rows="10"></textarea></label>
+        </fieldset>
+
+        <fieldset class="send_purpose_container">
+            <legend>What's this payment for?</legend>
+              <input id="send_purpose_family" type="radio" name="send_purpose" class="send_purpose" value="family">
+              <label for="send_purpose_family" class="send_purpose_btn"> I'm sending money to family or friends</label>
+              <input id="send_purpose_goods" name="send_purpose" type="radio" class="send_purpose" value="goods">
+              <label for="send_purpose_goods" class="send_purpose_btn"> I'm paying for goods or services</label>
+
+        </fieldset>
+      </form>
+    </div><!-- /.body -->
+    <div class="footer">
+      <button class="btn-clear-form">Clear</button>
+      <button class="nav-btn" data-target="screen-overlay,screen-confirmation">Next</button>
+    </div><!-- /.footer -->
+  </div> <!-- /#screen-send -->
+
+  <div class="overlay screen hidden" id="screen-overlay"></div>
+
+  <div class="screen hidden send_confirmation" id="screen-confirmation">
+    <div class="header">Send Money</div>
+    <div class="body">
+
+      <div class="success">You have sent $1.00 USD to John Doe!</div>
+    </div><!-- /.body -->
+    <div class="footer">
+      <button class="nav-btn" data-target="screen-send">Send Money</button>
+      <button class="nav-btn" data-target="screen-history">Transaction History</button>
+    </div><!-- /.footer -->
+  </div> <!-- /#screen-confirmation -->
+
+
+  <div class="screen send_history hidden" id="screen-history">
+    <div class="header">Transaction History</div>
+    <div class="body scroll">
+
+
+      <table class="transaction_container" id="transaction_container" data-count="0">
+        <tbody>
+          <!-- First set is injected on load -->
+        </tbody>
+      </table>
+
+      <div class="load_more_msg" id="load_more"> Loading more... </div>
+    </div><!-- /.body -->
+    <div class="footer">
+      <button class="nav-btn" data-target="screen-home">Back</button>
+    </div><!-- /.footer -->
+  </div> <!-- /#screen-history -->
+
+</div><!-- /.container -->
+
+
+
+
+<script type="text/template" id="history_template">
+  <tr class="transaction">
+    <td class="date">$$date$$</td><td class="desc">$$title$$</td><td class="amt">$$amount$$</td>
+  </tr>
+</script>
+
+<script>
+  // var pp = {'history': {history|s}};
+</script>
+
+<script src="/javascripts/navigation.js"></script>
+<script src="/javascripts/validation.js"></script>
+<script src="/javascripts/history.js"></script>
+
+</body>
+</html>
