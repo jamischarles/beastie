@@ -8,9 +8,11 @@ $input-border-color = #666
   box-sizing: border-box
 
 body
-  padding: 50px
+  // padding: 50px
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
+  margin 0
+  padding 0
 a
   color: #00B7FF
 
@@ -20,10 +22,8 @@ a
 .container
   // margin: 0 auto
   overflow: hidden
-
   height: 602px
-  left: 500px
-  position: absolute
+  position: relative
   width: 400px
 
 .screen
@@ -39,6 +39,7 @@ a
 
 
   &.hidden
+
     -webkit-transform: translateX(1200px);
 
   &.overlay
