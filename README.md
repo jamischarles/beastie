@@ -17,4 +17,6 @@ Running it locally
 5. Open `http://localhost:3000/` in your browser
 
 
+Screenshot
+========
 ![](https://raw.github.com/jamischarles/beastie/master/screenshots/preview.png)
