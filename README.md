@@ -1,5 +1,17 @@
 beastie
 =======
-UI comp styles are on branch 1.0.
+This is a take home exercise for the interview at PP.
 
-New & improved styles & responsiveness are on master.
+- Stylus for CSS.
+- Dust.js for templating.
+- Express for server rendering.
+
+I wrote everything from scratch.
+
+Running it locally
+========
+1. `git clone https://github.com/jamischarles/beastie.git`
+2. `cd beastie`
+3. `npm install`
+4. `node app.js`
+5. Open `http://localhost:3000/` in your browser
