@@ -17,4 +17,4 @@ Running it locally
 5. Open `http://localhost:3000/` in your browser
 
 
-![](https://cloudup.com/cVw_WG1epuN)
+![](https://raw.github.com/jamischarles/beastie/master/screenshots/preview.png)
