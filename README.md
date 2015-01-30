@@ -6,7 +6,7 @@ This is a take home exercise for the interview at PP.
 - Dust.js for templating.
 - Express for server rendering.
 
-I wrote everything from scratch.
+Everything else from scratch.
 
 Running it locally
 ========
