@@ -15,3 +15,6 @@ Running it locally
 3. `npm install`
 4. `node app.js`
 5. Open `http://localhost:3000/` in your browser
+
+
+![](https://cloudup.com/cVw_WG1epuN)
