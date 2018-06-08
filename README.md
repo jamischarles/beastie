@@ -23,4 +23,4 @@ Screenshot
 
 Demo
 ========
-![](https://raw.github.com/jamischarles/beastie/master/screenshots/demo.png)
+![](https://raw.github.com/jamischarles/beastie/master/screenshots/demo.gif)
