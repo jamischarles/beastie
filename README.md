@@ -20,3 +20,7 @@ Running it locally
 Screenshot
 ========
 ![](https://raw.github.com/jamischarles/beastie/master/screenshots/preview.png)
+
+Demo
+========
+![](https://raw.github.com/jamischarles/beastie/master/screenshots/demo.png)
